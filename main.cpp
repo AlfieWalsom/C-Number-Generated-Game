@@ -2,6 +2,8 @@
 #include <ctime>
 #include <string>
 
+using namespace std;
+
 int main()
 {
     std::string playersName; // Players name.
@@ -20,29 +22,29 @@ int main()
     
     randomNumber = (rand() % numberSpand) + add1;
 
-    std::cout << "Hello there!" << std::endl;
-    std::cout << "What is your name?" << std::endl;
-    std::cout << "" << std::endl;
+    cout << "Hello there!" << endl;
+    cout << "What is your name?" << endl;
+    cout << "" << endl;
 
-    std::getline(std::cin, playersName);
-    std::cout << "" << std::endl;
+    getline(cin, playersName);
+    cout << "" << endl;
 
 
-    std::cout << "Hello there: " << playersName << ", welcome to a brand new guessing name coded from c++." << std::endl;
-    std::cout << "" << std::endl;
-    std::cout << "To get started, please imput a number from " << add1 << " and " << numberSpand << ". We will tell you if you are too low or too high!" << std::endl;
+    cout << "Hello there: " << playersName << ", welcome to a brand new guessing name coded from c++." << endl;
+    cout << "" << endl;
+    cout << "To get started, please imput a number from " << add1 << " and " << numberSpand << ". We will tell you if you are too low or too high!" << endl;
 
     do {
         
-        std::cout << "Imput: ";
-        std::cin >> playersGuess; // Input for data
+        cout << "Imput: ";
+        cin >> playersGuess; // Input for data
         tries++;
 
         if (playersGuess > randomNumber) {
-            std::cout << playersName << ", your number is too high!" << std::endl;
+             cout << playersName << ", your number is too high!" << endl;
         }
         else if(playersGuess < randomNumber) {
-            std::cout << playersName << ", your number is too low!" << std::endl;
+            cout << playersName << ", your number is too low!" << endl;
         }
 
         if (playersGuess > numberSpand) {
@@ -56,8 +58,8 @@ int main()
 
 
     if (playersGuess == randomNumber) {
-        std::cout << playersName << ", you have guessed the correct answer. You used " << tries << " tries.";
-        std::cout << "" << std::endl;
+        cout << playersName << ", you have guessed the correct answer. You used " << tries << " tries.";
+        cout << "" << endl;
     }
 
     return 0;
